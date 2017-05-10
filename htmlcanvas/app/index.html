@@ -8,7 +8,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1"> {{content-for "head"}}
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<<<<<<< HEAD
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
   <link rel="stylesheet" href="{{rootURL}}assets/htmlcanvas.css"> {{content-for "head-footer"}}
@@ -28,13 +27,13 @@
         <p>Choose Color</p><br>
         <div id="Colors-Left">
           <ul class="list-group">
-            <li style="background:green;" id="green"></li>
-            <li style="background:blue;" id="blue" onclick="color(this)"></li>
-            <li style="background:red;" id="red" onclick="color(this)"></li>
-            <li style="background:yellow;" id="yellow" onclick="color(this)"></li>
-            <li style="background:orange;" id="orange" onclick="color(this)"></li>
-            <li style="background:black;" id="black" onclick="color(this)"></li>
-            <li style="background:white;border:2px solid;" id="white" onclick="color(this)"></li>
+            <li style="background:green;" id="green" onclick="color(this)" class="color_class"></li>
+            <li style="background:blue;" id="blue" onclick="color(this)" class="color_class"></li>
+            <li style="background:red;" id="red" onclick="color(this)" class="color_class"></li>
+            <li style="background:yellow;" id="yellow" onclick="color(this)" class="color_class"></li>
+            <li style="background:orange;" id="orange" onclick="color(this)" class="color_class"></li>
+            <li style="background:black;" id="black" onclick="color(this)" class="color_class"></li>
+            <li style="background:white;border:2px solid;" id="white" onclick="color(this)" class="color_class"></li>
           </ul>
         </div>
         <input type="button" value="clear" id="clr" size="23">
@@ -55,7 +54,7 @@
       <div class="panel panel-default">
         <div id="right">
           <div class="panel panel-default chat-messages">
-            <ul class="panel-body chat-message-list" data-chat="message-list"></ul>
+            <ul style="list-style: none;" class="panel-body chat-message-list" data-chat="message-list"></ul>
           </div>
           <section class="chat-input">
             <form data-chat="chat-form" class="cb-container">
