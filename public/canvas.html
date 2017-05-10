@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Htmlcanvas</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="/assets/vendor-969213113bf8ce8653053cf775905b0d.css" integrity="sha256-5TkWZwOs25hrG91gTZk3XPjJe8d4yhWtIFcK4p/Pm0s= sha512-HvxN2lh5wRYcHURug/yfoHGetnRqL4oUt4ZCZCuirm4hxOjJIr3ezBvSyPGYRNFGkpXxF6O0QrQhKZJHAC6aaA==" >
+  <link rel="stylesheet" href="/assets/htmlcanvas-d5453d8de18dcefec7e7915e86aea8f3.css" integrity="sha256-qvdU6bE4X+ng+nXLVCbO6Ax/0bjgm1Kg5sgPr8mguG4= sha512-74UBFfwQI/xuvrKCFQliwh6v90BBctoqBRSIZZiCIZloIIuxACTGxzPI47aCf68I549tBTsKNbcaATjinxW7YA==" >
+</head>
+
+<body>
+  
+
+  <div id="title" class="w3-container w3-teal text-center">
+    <h1>Draw Canvas</h1>
+  </div>
+
+  <div class="row">
+
+
+    <!--Color Panels-->
+    <div class="col-sm-1">
+      <div class="panel panel-default text-center">
+        <p>Choose Color</p><br>
+        <div id="Colors-Left">
+          <ul class="list-group">
+            <li style="background:green;" id="green" onclick="color(this)" class="color_class"></li>
+            <li style="background:blue;" id="blue" onclick="color(this)" class="color_class"></li>
+            <li style="background:red;" id="red" onclick="color(this)" class="color_class"></li>
+            <li style="background:yellow;" id="yellow" onclick="color(this)" class="color_class"></li>
+            <li style="background:orange;" id="orange" onclick="color(this)" class="color_class"></li>
+            <li style="background:black;" id="black" onclick="color(this)" class="color_class"></li>
+            <li style="background:white;border:2px solid;" id="white" onclick="color(this)" class="color_class"></li>
+          </ul>
+        </div>
+        <input type="button" value="clear" id="clr" size="23">
+
+      </div>
+    </div>
+
+
+    <!--Canvas-->
+    <div class="col-sm-8">
+      <div class="panel panel-default">
+        <div id="center"> <canvas id="drawing"></canvas></div>
+      </div>
+    </div>
+
+
+    <!--Chat-->
+    <div class="col-sm-3">
+      <div id="right">
+        <div class="panel panel-default chat-messages">
+          <ul style="list-style: none;" class="panel-body chat-message-list" data-chat="message-list"></ul>
+        </div>
+        <section class="chat-input">
+          <form data-chat="chat-form" class="cb-container">
+            <div class="input-group">
+              <label for="js-message-input" class="sr-only">Message:</label>
+              <input type="text" class="form-control" data-chat="message-input" autofocus>
+              <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Go!</button>
+                </span>
+            </div>
+            <!-- /input-group -->
+          </form>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!--
+  <div id="Colors-Left">
+    <div style="position:absolute;top:12%;left:43%;">Choose Color</div>
+    <div style="position:absolute;top:15%;left:45%;width:10px;height:10px;background:green;" id="green"></div>
+    <div style="position:absolute;top:15%;left:46%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+    <div style="position:absolute;top:15%;left:47%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:45%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:46%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+    <div style="position:absolute;top:17%;left:47%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+
+    <div style="position:absolute;top:22%;left:45%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+
+=======
+    <link rel="stylesheet" href="{{rootURL}}assets/vendor-969213113bf8ce8653053cf775905b0d.css">
+    <link rel="stylesheet" href="{{rootURL}}assets/htmlcanvas-d5453d8de18dcefec7e7915e86aea8f3.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+
+     <div id="left">
+        <div style="position:absolute;top:12%;left:43%;">Choose Color</div>
+    <div style="position:absolute;top:15%;left:45%;width:10px;height:10px;background:green;" id="green" class="color_class"></div>
+    <div style="position:absolute;top:15%;left:46%;width:10px;height:10px;background:blue;" id="blue" class="color_class"></div>
+    <div style="position:absolute;top:15%;left:47%;width:10px;height:10px;background:red;" id="red" class="color_class"></div>
+    <div style="position:absolute;top:17%;left:45%;width:10px;height:10px;background:yellow;" id="yellow" class="color_class"></div>
+    <div style="position:absolute;top:17%;left:46%;width:10px;height:10px;background:orange;" id="orange" class="color_class"></div>
+    <div style="position:absolute;top:17%;left:47%;width:10px;height:10px;background:black;" id="black" class="color_class"></div>
+    <div style="position:absolute;top:20%;left:43%;">Eraser</div>
+    <div style="position:absolute;top:22%;left:45%;width:15px;height:15px;background:white;border:2px solid;" id="white" ></div>
+>>>>>>> origin/master
+    <input type="button" value="clear" id="clr" size="23" style="position:absolute;top:55%;left:15%;">
+  </div>
+
+
+  <div id="center"> <canvas id="drawing"></canvas></div>
+
+
+
+
+  <div id="right">
+    <div class="panel panel-default chat-messages">
+      <ul class="panel-body chat-message-list" data-chat="message-list"></ul>
+    </div>
+    <section class="chat-input">
+      <form data-chat="chat-form" class="cb-container">
+        <div class="input-group">
+          <label for="js-message-input" class="sr-only">Message:</label>
+          <input type="text" class="form-control" data-chat="message-input" autofocus>
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div>
+      </form>
+    </section>
+  </div>
+-->
+
+
+
+
+
+
+
+  <script src="/assets/vendor-66cff562b3b3049f546649dc8b61fb50.js" integrity="sha256-jkB+Ra//QoVnRIGEDT7qJT2WeR0GugsmgjyMq8pRqPQ= sha512-cKq4Nax3HdLOnN6XpyGcxBF28N+ove5VRMxn1Y7XtzY207mmgUKkrGKOyvFFfi2hN3w3Rs1A7+acWMs6qJLTFQ==" ></script>
+  <script src="/assets/htmlcanvas-9aecce5dc0a0145177b3131aac654acd.js" integrity="sha256-onjZlT90KajNqtoEbpgS37u8/KtyQQQxF4zLBa56BnE= sha512-XGsB7vFHcDqerQ7TYEYoFzry2A7DVq2PIpdv3t0Hf7F9qmwMpTlftvHqp22HaIRlqUkiXoCcF2Uo6dbQAjfimA==" ></script>
+  <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
+
+</body>
+
+</html>

@@ -72,9 +72,9 @@
     var LIST_SELECTOR = '[data-chat="message-list"]';
 
     var userStore = new _storage.UserStore('x-chattrbox/u');
-    var username = userStore.get();
+    var username = sessionStorage.getItem("Username");
     if (!username) {
-      username = (0, _dom.promptForUsername)();
+      //username = (0, _dom.promptForUsername)();
       userStore.set(username);
     }
 
