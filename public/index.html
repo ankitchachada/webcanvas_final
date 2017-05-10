@@ -7,11 +7,11 @@
   <title>Htmlcanvas</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<meta name="htmlcanvas/config/environment" content="%7B%22modulePrefix%22%3A%22htmlcanvas%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22htmlcanvas%22%2C%22version%22%3A%220.0.0+75ac4e73%22%7D%2C%22exportApplicationGlobal%22%3Afalse%2C%22ember-websockets%22%3A%7B%22socketIO%22%3Afalse%7D%7D" />
+<meta name="htmlcanvas/config/environment" content="%7B%22modulePrefix%22%3A%22htmlcanvas%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22htmlcanvas%22%2C%22version%22%3A%220.0.0+79fd4b71%22%7D%2C%22exportApplicationGlobal%22%3Afalse%2C%22ember-websockets%22%3A%7B%22socketIO%22%3Afalse%7D%7D" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="/assets/vendor-969213113bf8ce8653053cf775905b0d.css" integrity="sha256-5TkWZwOs25hrG91gTZk3XPjJe8d4yhWtIFcK4p/Pm0s= sha512-HvxN2lh5wRYcHURug/yfoHGetnRqL4oUt4ZCZCuirm4hxOjJIr3ezBvSyPGYRNFGkpXxF6O0QrQhKZJHAC6aaA==" >
-  <link rel="stylesheet" href="/assets/htmlcanvas-3a69bc3cba0ad2070df2c273c9dd2b97.css" integrity="sha256-juZn1Sg67ov82SPbndW9JT3rdU5izug5Ubefts4Mnqc= sha512-7y+PH+af9eqIxzWWd58TWHhJSy1zKkU+5Njn0Jqhyd+mqgMeNU8qNIiBSxyQVphZO1Vmeu2F9UAi+5vGGtRPqA==" > 
+  <link rel="stylesheet" href="/assets/htmlcanvas-d5453d8de18dcefec7e7915e86aea8f3.css" integrity="sha256-qvdU6bE4X+ng+nXLVCbO6Ax/0bjgm1Kg5sgPr8mguG4= sha512-74UBFfwQI/xuvrKCFQliwh6v90BBctoqBRSIZZiCIZloIIuxACTGxzPI47aCf68I549tBTsKNbcaATjinxW7YA==" > 
 </head>
 
 <body>
@@ -22,8 +22,10 @@
   </div>
 
   <div class="row">
+
+
     <!--Color Panels-->
-    <div class="col-sm-3">
+    <div class="col-sm-1">
       <div class="panel panel-default text-center">
         <p>Choose Color</p><br>
         <div id="Colors-Left">
@@ -42,8 +44,9 @@
       </div>
     </div>
 
+
     <!--Canvas-->
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <div class="panel panel-default">
         <div id="center"> <canvas id="drawing"></canvas></div>
       </div>
@@ -52,7 +55,7 @@
 
     <!--Chat-->
     <div class="col-sm-3">
-      <div class="panel panel-default">
+
         <div id="right">
           <div class="panel panel-default chat-messages">
             <ul style="list-style: none;" class="panel-body chat-message-list" data-chat="message-list"></ul>
@@ -70,7 +73,7 @@
             </form>
           </section>
         </div>
-      </div>
+
     </div>
 
   </div>
@@ -90,7 +93,7 @@
 
 =======
     <link rel="stylesheet" href="/assets/vendor-969213113bf8ce8653053cf775905b0d.css" integrity="sha256-5TkWZwOs25hrG91gTZk3XPjJe8d4yhWtIFcK4p/Pm0s= sha512-HvxN2lh5wRYcHURug/yfoHGetnRqL4oUt4ZCZCuirm4hxOjJIr3ezBvSyPGYRNFGkpXxF6O0QrQhKZJHAC6aaA==" >
-    <link rel="stylesheet" href="/assets/htmlcanvas-3a69bc3cba0ad2070df2c273c9dd2b97.css" integrity="sha256-juZn1Sg67ov82SPbndW9JT3rdU5izug5Ubefts4Mnqc= sha512-7y+PH+af9eqIxzWWd58TWHhJSy1zKkU+5Njn0Jqhyd+mqgMeNU8qNIiBSxyQVphZO1Vmeu2F9UAi+5vGGtRPqA==" >
+    <link rel="stylesheet" href="/assets/htmlcanvas-d5453d8de18dcefec7e7915e86aea8f3.css" integrity="sha256-qvdU6bE4X+ng+nXLVCbO6Ax/0bjgm1Kg5sgPr8mguG4= sha512-74UBFfwQI/xuvrKCFQliwh6v90BBctoqBRSIZZiCIZloIIuxACTGxzPI47aCf68I549tBTsKNbcaATjinxW7YA==" >
 
     
   </head>
@@ -143,7 +146,7 @@
 
 
   <script src="/assets/vendor-74bcaa43735e2427db4e3a4b2263ff70.js" integrity="sha256-er57Fh8ScDpfa2jF93HOyJ9gpyM9Cauo677eVCTHohU= sha512-cHX2fTBegxaHKi09YG25dUzE5gscfxLcXLKHDuwBEFks5bpQxpD7MFF5cOkj7HDdnd3hJk2PqJmcd6QX3wp8Aw==" ></script>
-  <script src="/assets/htmlcanvas-3030af961ab14298fb97d7f6e1be5097.js" integrity="sha256-oqJskKeJVsI14PGCTfZVLLlzDnePd01DUKmI02p7ZFI= sha512-FP4B7cQtWgDra6HtTA9fJ1q6g1fCc9/lylFA9vTkILL5He3tXwhTKvMLsnhX19cWW0B61aRiexfWaN6PrwynWQ==" ></script>
+  <script src="/assets/htmlcanvas-b0bb8ebc126df3877ed382a3e6a3fe24.js" integrity="sha256-9UaHFGUpEca5hxmd/kBXU1pbi7GZ+09YHO5hUsW0xDE= sha512-fiViUPWQ1UuLSlKRL+bVuw823eca0W5v7A6WN9EFyBP2v1TEsmlVGUOuzuH6IUuXlP1y9tHeXxRO+MvMZqiBmQ==" ></script>
   <script src="https://cdn.socket.io/socket.io-1.0.0.js"></script>
 
 
