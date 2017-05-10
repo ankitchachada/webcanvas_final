@@ -47,8 +47,8 @@ function findxy(res, e) {
     if (flag) {
       prevX = currX;
       prevY = currY;
-      currX = e.clientX; // - canvas.offsetLeft;
-      currY = e.clientY; // - canvas.offsetTop;
+      currX = e.clientX - canvas.offsetLeft;
+      currY = e.clientY - canvas.offsetTop;
       draw();
     }
   }
@@ -130,8 +130,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // set canvas to full browser width/height
   //canvas.width = width;
-  canvas.width = 600;
-  canvas.height = 600;
+  canvas.width = 800;
+  canvas.height = 800;
   //canvas.height = height;
 
   // register mouse event handlers
